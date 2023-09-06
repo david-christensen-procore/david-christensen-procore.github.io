@@ -4,28 +4,30 @@
   </head>
   <body>
     <h1>Bookmarklet</h1>
+
+    <p>Drag this link to your bookmarks bar.</p>
     
-    <a href="javascript:(function()%7Bconst%20sith%20%3D%20%5B'Aaron%20Miller'%2C'Anna%20Telesco'%2C'Dafna%20Gidnoy'%2C'David%20Christensen'%2C'Evan%20Leky'%2C'Jeanine%20Chiu'%2C'Matthew%20Rattray'%2C'Mayura%20Narayan%20Amrolkar'%2C'Nadeen%20Ghali'%2C'Surabhya%20Aryal'%2C'Topher%20England'%2C'Vaibhav%20Paliwal'%2C%5D%3Bconst%20elements%20%3D%20sith.map((name)%20%3D%3E%20document.querySelector(%60div%5Brole%3D%22checkbox%22%5D%5Baria-checked%3D%22false%22%5D%5Baria-label%3D%22%24%7Bname%7D%22%5D%60)).filter((element)%20%3D%3E%20Boolean(element))%3Belements.forEach((element)%20%3D%3E%20%7B%20element.click()%3B%20%7D)%7D)()">Vote Sith</a>
+    <p><a href="javascript:(function()%7Bconst%20sith%20%3D%20%5B'Aaron%20Miller'%2C'Anna%20Telesco'%2C'Dafna%20Gidnoy'%2C'David%20Christensen'%2C'Evan%20Leky'%2C'Jeanine%20Chiu'%2C'Matthew%20Rattray'%2C'Mayura%20Narayan%20Amrolkar'%2C'Nadeen%20Ghali'%2C'Surabhya%20Aryal'%2C'Topher%20England'%2C'Vaibhav%20Paliwal'%2C%5D%3Bconst%20elements%20%3D%20sith.map((name)%20%3D%3E%20document.querySelector(%60div%5Brole%3D%22checkbox%22%5D%5Baria-checked%3D%22false%22%5D%5Baria-label%3D%22%24%7Bname%7D%22%5D%60)).filter((element)%20%3D%3E%20Boolean(element))%3Belements.forEach((element)%20%3D%3E%20%7B%20element.click()%3B%20%7D)%7D)()">Vote Sith</a></p>
     
-    <h1>Row Code</h1>
+    <h1>Raw Code</h1>
     
-    <textarea>
-      const sith = [
-                'Aaron Miller',
-                'Anna Telesco',
-                'Dafna Gidnoy',
-                'David Christensen',
-                'Evan Leky',
-                'Jeanine Chiu',
-                'Matthew Rattray',
-                'Mayura Narayan Amrolkar',
-                'Nadeen Ghali',
-                'Surabhya Aryal',
-                'Topher England',
-                'Vaibhav Paliwal',
-            ];
-            const elements = sith.map((name) => document.querySelector(`div[role="checkbox"][aria-checked="false"][aria-label="${name}"]`)).filter((element) => Boolean(element));
-            elements.forEach((element) => { element.click(); });
+    <textarea style="width: 100%; height: 280px;">
+const sith = [
+    'Aaron Miller',
+    'Anna Telesco',
+    'Dafna Gidnoy',
+    'David Christensen',
+    'Evan Leky',
+    'Jeanine Chiu',
+    'Matthew Rattray',
+    'Mayura Narayan Amrolkar',
+    'Nadeen Ghali',
+    'Surabhya Aryal',
+    'Topher England',
+    'Vaibhav Paliwal',
+];
+const elements = sith.map((name) => document.querySelector(`div[role="checkbox"][aria-checked="false"][aria-label="${name}"]`)).filter((element) => Boolean(element));
+elements.forEach((element) => { element.click(); });
     </textarea>
     
     <p>Converted to bookmarklet using <a href="https://mrcoles.com/bookmarklet/">this</a> tool.</p>
